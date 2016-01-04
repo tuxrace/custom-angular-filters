@@ -10,14 +10,33 @@
 		 else
 		   return name;
 	  }
-	});
-	
+	})
+
 To use
 
     {{'arman' | propername: 'm'}}
-
 Result
 
     Mr. Arman
+Or
+
+    {{'arman' | propername}}
+
+Result
+
+    Arman
+
+Or
+
+    <ul class="list"> 
+      <li ng-repeat="n in names | orderBy: -first">{{n.first | propername}}</li>                 
+    </ul>
+
+Result
+
+    Arman
+    Jane
+
+
 
 working example here - http://codepen.io/anon/pen/pgNEEp
